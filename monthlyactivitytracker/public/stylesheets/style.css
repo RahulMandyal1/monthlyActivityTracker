@@ -1,0 +1,173 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.flex-row, .container .activity-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.flex-col, header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.center, .container .delete-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body {
+  font-size: 1.5rem;
+}
+
+section {
+  padding: 4% 9%;
+}
+
+header {
+  padding: 2rem;
+  width: 100%;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #3e8ed0;
+  text-align: center;
+}
+
+header .userinput-container {
+  margin: 2rem 0;
+}
+
+header input {
+  display: inline-block;
+  border: 0.1rem solid #ddd;
+  padding: 0.75rem;
+}
+
+header button {
+  background: #00d1b2;
+  padding: 0.8rem;
+  color: #fff;
+  border: none;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+}
+
+.container .activity-container {
+  -webkit-box-shadow: 0.2rem 0.3rem 0.8rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0.2rem 0.3rem 0.8rem rgba(0, 0, 0, 0.1);
+  height: 100%;
+  position: relative;
+  padding: 3rem 2rem;
+  margin: 2rem 0;
+}
+
+.container ul {
+  list-style: none;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 58%;
+          flex: 0 1 58%;
+}
+
+.container li {
+  display: inline-block;
+  padding: .7rem 1.5rem;
+  margin: 0.5rem;
+  border: 0.1rem solid #ddd;
+  cursor: pointer;
+}
+
+.container .activityname {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%;
+  margin: 0.5rem;
+  background: #eff5fb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.container .activityname p {
+  font-size: 2rem;
+  color: #333;
+  margin: 1rem 0;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.container .activityname .monthName {
+  padding: .5rem 1rem;
+  border-radius: 1rem;
+  background-color: #FF6347;
+  color: #fff;
+}
+
+.container .delete-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(245, 38, 38, 0.961);
+}
+
+.container .delete-btn i {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.container .active {
+  background: #00d1b2;
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
