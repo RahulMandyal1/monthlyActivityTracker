@@ -31,13 +31,17 @@ class App extends Component {
     window.addEventListener("beforeunload", this.handleUpdateLocalStorage);
   }
 
+  //before moving to any component update  the data
   componentWillUnmount() {
     window.removeEventListener("beforeunload", this.handleUpdateLocalStorage);
   }
 
+  // once data is updated also update  the localStorage
   handleUpdateLocalStorage = () => {
     localStorage.setItem("state", JSON.stringify(this.state));
   };
+
+  // once the user click on any day of the month change isDone to true and change background color
 
   handleActivityClick = ({ target }) => {
     let { id } = target;
@@ -52,6 +56,7 @@ class App extends Component {
     });
   };
 
+  // delete an activity from  the month
   deleteActivity = ({ target }) => {
     let id = Number(target.id);
     let allactivities = [...this.state.activities];
@@ -60,6 +65,8 @@ class App extends Component {
       activities: allactivities,
     });
   };
+
+  // to get an array of  the days of a month with isDone default to false
   generateMonth = () => {
     let dt = new Date();
     let month = dt.getMonth();
@@ -83,7 +90,7 @@ class App extends Component {
           <div className="container">
             {this.state.activities.map((eachactivity, i) => {
               return (
-                <div className="activity-container">
+                <div className="activity-container" key={i}>
                   <div className="activityname" key={i}>
                     <p>{eachactivity.activityname}</p>
                     <h3 className="monthName">{this.state.monthName}</h3>
@@ -95,6 +102,7 @@ class App extends Component {
                           className={day.isDone === true ? "active" : ""}
                           id={day.id}
                           onClick={this.handleActivityClick}
+                          key={eachactivity.activityname + day.id}
                           data-parent={i}
                         >
                           {day.id}
